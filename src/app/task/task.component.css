@@ -1,0 +1,26 @@
+.task {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.task__text {
+  margin: 0 10px 0 0;
+  padding: 7px 5px 5px 5px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  flex-grow: 1;
+  transition: border .3s;
+}
+
+.task__text:focus {
+  border-color: #c9c9c9;
+}
+
+.task__delete {
+  padding: 5px 10px;
+  cursor: pointer;
+}
