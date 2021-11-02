@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'homework53';
+  tasks = ['Buy milk', 'Walk with dog', 'Do homework'];
+
+  changeTaskText(index: number, event: string) {
+    this.tasks[index] = event;
+  }
+
+  deleteTask(index: number) {
+    this.tasks.splice(index, 1);
+  }
 }

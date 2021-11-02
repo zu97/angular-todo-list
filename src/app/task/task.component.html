@@ -1,4 +1,4 @@
 <div class="task">
-  <input type="text" class="task__text" [value]="text" (input)="changeText($event)">
+  <input type="text" class="task__text" [value]="text" (change)="changeText($event)">
   <button type="button" class="task__delete" (click)="deleteTask()">Delete</button>
 </div>
