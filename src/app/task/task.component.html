@@ -1,4 +1,5 @@
 <div class="task">
+  <input type="checkbox" class="task__checkbox" [checked]="complete" (change)="changeComplete($event)">
   <input type="text" class="task__text" [value]="text" (change)="changeText($event)">
   <button type="button" class="task__delete" (click)="deleteTask()">Delete</button>
 </div>

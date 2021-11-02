@@ -7,7 +7,9 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class TaskComponent {
   @Input() text = '';
+  @Input() complete = false;
   @Output() newText = new EventEmitter();
+  @Output() onComplete = new EventEmitter();
   @Output() delete = new EventEmitter();
 
   changeText(event: Event) {
@@ -17,5 +19,10 @@ export class TaskComponent {
 
   deleteTask() {
     this.delete.emit();
+  }
+
+  changeComplete(event: Event) {
+    const target = <HTMLInputElement>event.target;
+    this.onComplete.emit(target.checked);
   }
 }

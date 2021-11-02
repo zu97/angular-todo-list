@@ -5,8 +5,10 @@
 <div class="container">
   <app-task
     *ngFor="let task of tasks; let i = index"
-    [text]="task"
+    [text]="task.text"
+    [complete]="task.complete"
     (newText)="changeTaskText(i, $event)"
+    (onComplete)="changeTaskComplete(i, $event)"
     (delete)="deleteTask(i)"
   ></app-task>
 </div>
