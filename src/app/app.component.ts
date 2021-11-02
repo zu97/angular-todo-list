@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'homework53';
+  newTask = '';
   tasks = ['Buy milk', 'Walk with dog', 'Do homework'];
 
   changeTaskText(index: number, event: string) {
@@ -15,5 +16,10 @@ export class AppComponent {
 
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
+  }
+
+  addNewTask() {
+    this.tasks.push(this.newTask);
+    this.newTask = '';
   }
 }
